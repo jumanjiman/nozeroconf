@@ -12,7 +12,6 @@ Source0:	%{name}-%{version}.tar.gz
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	noarch
 
-Requires:	%{network_global_config}
 Requires:	sed
 
 %description
@@ -45,7 +44,7 @@ http://www.zeroconf.org/
 
 %preun
 if [ $1 -eq 0 ]; then
-  sed -i '/^NOZEROCONF.*/d' %{network_global_config}
+  sed -i '/^NOZEROCONF.*/d' %{network_global_config} || :
 fi
 
 
