@@ -30,6 +30,7 @@ http://www.zeroconf.org/
 
 %install
 %{__rm} -rf %{buildroot}
+%{__mkdir_p} %{buildroot}
 
 
 %clean
