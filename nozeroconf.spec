@@ -57,6 +57,14 @@ if [ $1 -gt 0 ]; then
 fi
 
 
+%verifyscript
+. %{network_global_config} || :
+if [[ -z ${NOZEROCONF} ]]; then
+  echo 'Error: zeroconf is enabled for boot-time' >&2
+  exit 1
+fi
+
+
 %changelog
 * Mon Feb 07 2011 Paul Morgan <jumanjiman@gmail.com> 0.1-1
 - new package built with tito
