@@ -1,7 +1,7 @@
 %global network_global_config /etc/sysconfig/network
 
 Name:		nozeroconf
-Version:	0.1
+Version:	0.2
 Release:	1%{?dist}
 Summary:	Disables Zeroconf networking
 
@@ -66,6 +66,9 @@ fi
 
 
 %changelog
+* Mon Feb 07 2011 Paul Morgan <jumanjiman@gmail.com> 0.2-1
+- add verifyscript
+
 * Mon Feb 07 2011 Paul Morgan <jumanjiman@gmail.com> 0.1-1
 - new package built with tito
 
