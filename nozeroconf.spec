@@ -10,6 +10,7 @@ License:	GPLv3+
 URL:		https://github.com/jumanjiman/nozeroconf
 Source0:	%{name}-%{version}.tar.gz
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
+BuildArch:	noarch
 
 Requires:	%{network_global_config}
 Requires:	sed
